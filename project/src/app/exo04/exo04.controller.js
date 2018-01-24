@@ -1,24 +1,23 @@
 (function() {
   'use strict';
 
-  function Exo04Ctrl($location) {
+  function Exo04Ctrl($location, settingService, meteoService) {
     var vm = this;
-
-    var text;
-    vm.text = text;
+    vm.settingService = settingService;
+    vm.meteoService = meteoService;
+    vm.text = '';
     vm.afficherText = afficherText;
     function afficherText(){
-      console.log(vm.text);
+      vm.settingService.city = vm.text;
+      vm.meteoService.getMeteo();
+      
+
     }
 
-    function goToExo(exoNumber) {
-      if (exoNumber === 3) {
-        $location.path('/exo04');
-      }
-    }
+   
   }
 
-  Exo04Ctrl.$inject = ['$location'];
+  Exo04Ctrl.$inject = ['$location','settingService','meteoService'];
 
   angular.module('daproject')
     .controller('Exo04Ctrl', Exo04Ctrl);
