@@ -40,10 +40,11 @@
         controllerAs: 'exo04',
       })
 
-       .when('/more', {
-        templateUrl: 'src/app/more/more.html',
-        controller: 'MoreCtrl',
-        controllerAs: 'more',
+       .when('/final', {
+        templateUrl: 'src/app/final/final.html',
+        controller: 'FinalCtrl',
+        controllerAs: 'final',
+
       })
 
 

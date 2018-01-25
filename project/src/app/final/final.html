@@ -1,0 +1,21 @@
+<div class="Boissons" >	
+	<div >
+		<input ng-model="final.text"/>
+		<button ng-click="final.afficherIngredient()">Buvons!</button>
+	</div>
+	<div class="recherche">
+		<h2>{{final.searchConfig.ingredient}}</h2>
+		
+
+		<div ng-repeat="cocktail in final.cocktailSearch.cocktailList">
+			<div>
+				<p>{{cocktail.strDrink}}</p>
+			<img src="{{cocktail.strDrinkThumb}}"/>
+			</div>
+			<div>
+				<p></p>
+			</div>
+
+		</div>
+	</div>
+</div>
