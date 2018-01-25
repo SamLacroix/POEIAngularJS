@@ -44,6 +44,7 @@
         templateUrl: 'src/app/final/final.html',
         controller: 'FinalCtrl',
         controllerAs: 'final',
+
       })
 
 
