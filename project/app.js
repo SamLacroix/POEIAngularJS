@@ -40,6 +40,12 @@
         controllerAs: 'exo04',
       })
 
+       .when('/more', {
+        templateUrl: 'src/app/more/more.html',
+        controller: 'MoreCtrl',
+        controllerAs: 'more',
+      })
+
 
       .otherwise({redirectTo:'/'});
   }
